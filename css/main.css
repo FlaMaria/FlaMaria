@@ -1,0 +1,347 @@
+html {
+    scroll-behavior: smooth;
+    font-family: 'Her-Leeoksun';
+}
+
+h1 {
+    width: 100%;
+    background-color: white;
+    padding: 10px;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    margin: 0px;
+    text-align: center;
+    z-index: 1000;
+}
+
+ul {
+    position: sticky;
+    top: 55px;
+    width: 100;
+    height: 30px;
+    background-color: darkseagreen;
+    list-style: none;
+    padding: 10px;
+    text-align: center;
+    z-index: 1000;
+
+}
+
+ul li {
+    display: inline;
+    margin-right: 0px;
+    margin-left: 8%;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+ul li.home {
+    margin: 0px
+}
+
+ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+ul li a:hover {
+    color: black;
+}
+
+div {
+    width: 100;
+    padding: 5px;
+    margin: 5px;
+    text-align: center;
+    vertical-align: middle;
+}
+
+#banner_bg {
+    width: 50%;
+    margin-top: 100px;
+    margin-left: 25%;
+    padding-top: 80px;
+    padding-bottom: 80px;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.5);
+    font-family: serif;
+    font-size: 25px;
+    font-weight: bolder;
+    color: white;
+}
+
+p span {
+    color: darkolivegreen;
+    font-size: 50px;
+    font-weight: border;
+}
+
+hr {
+    width: 20%;
+    height: 10px;
+    background-color: darkseagreen;
+    border: none;
+    position: absolute;
+    left: 40%;
+}
+
+.main_banner {
+    margin-top: 20px;
+    background-image: url(../img_files/bright_version.jpg);
+    background-position: 50%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    height: 500px;
+}
+
+.main_contents {
+    font-family: 'Her-Leeoksun';
+    font-size: 25px;
+    padding: 60px
+}
+
+.hidden_link {
+    visibility: hidden;
+}
+
+.News_div {
+    background-image: url(../img_files/news_img2.jpg);
+    background-position: left;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    height: 300px;
+}
+
+.News_contents {
+    margin-top: 80px;
+    color: darkseagreen;
+    font-size: 30px;
+}
+
+div a {
+    text-decoration: none;
+}
+
+#intro_img {
+    padding: 0px;
+    margin: 0px;
+}
+
+#events {
+    background: darkseagreen; //background-size: cover;
+    color: #fff;
+    font-family: 'Her-Leeoksun';
+    font-size: 25px;
+}
+
+.table-padding {
+    padding: 5px;
+    width: 90%;
+}
+
+.section-padding {
+    margin-left: 10%;
+    padding-top: 20px;
+    padding-bottom: 70px; //text-align: center; 
+}
+
+.section-padding td {
+    padding-right: 50px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    list-style: none
+}
+
+img {
+    border: none
+}
+
+.bannerWrap {
+    position: relative;
+    width: 100%;
+    height: 270px;
+    border: 10px;
+    z-index: 10;
+}
+
+.bannerWrap ul li {
+    margin-left: 0px;
+}
+
+input {
+    display: none
+}
+
+label {
+    position: relative;
+    left: 1275px;
+    top: 0px;
+    float: left;
+    width: 20px;
+    height: 20px;
+    margin-left: 5px;
+    cursor: pointer;
+    text-align: center;
+    background: #ddd;
+    z-index: 1000;
+}
+
+.bannerImg {
+    margin-left: 25px;
+    position: center;
+    width: 95%;
+    height: 230px;
+    overflow: hidden
+}
+
+.bannerImg li {
+    position: absolute;
+    top: 0;
+    left: 300px
+}
+
+input:nth-of-type(1):checked ~ label:nth-of-type(1),
+input:nth-of-type(2):checked ~ label:nth-of-type(2),
+input:nth-of-type(3):checked ~ label:nth-of-type(3),
+input:nth-of-type(4):checked ~ label:nth-of-type(4) {
+    color: #fff;
+    background: #000
+}
+
+input:nth-of-type(1):checked ~ .bannerImg li:nth-of-type(1),
+input:nth-of-type(2):checked ~ .bannerImg li:nth-of-type(2),
+input:nth-of-type(3):checked ~ .bannerImg li:nth-of-type(3),
+input:nth-of-type(4):checked ~ .bannerImg li:nth-of-type(4) {
+    -webkit-animation: none;
+    animation: none;
+    /*밖으로 보내기*/
+    -webkit-transition: left 0.5s ease-in-out;
+    transition: left 0.5s ease-in-out;
+    left: 0;
+    z-index: 10;
+    /* 초기 움직임 제거 */
+}
+
+/* 기존 이미지 왼쪽으로 사라지게 하기*/
+
+input:checked ~ .bannerImg li {
+    -webkit-animation: slideOut 0.5s ease-in-out none;
+    animation: slideOut 0.5s ease-in-out none
+}
+
+/* 애니메이션 정의 */
+
+@keyframes slideOut {
+    0% {
+        left: 0px
+    }
+    100% {
+        left: -300px
+    }
+}
+
+.hvrbox,
+.hvrbox * {
+    box-sizing: border-box;
+}
+
+.hvrbox {
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+    max-width: 100%;
+    height: auto;
+}
+
+.hvrbox img {
+    max-width: 100%;
+}
+
+.hvrbox .hvrbox-layer_bottom {
+    display: block;
+}
+
+.hvrbox .hvrbox-layer_top {
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    color: #fff;
+    padding: 15px;
+    -moz-transition: all 0.4s ease-in-out 0s;
+    -webkit-transition: all 0.4s ease-in-out 0s;
+    -ms-transition: all 0.4s ease-in-out 0s;
+    transition: all 0.4s ease-in-out 0s;
+}
+
+.hvrbox:hover .hvrbox-layer_top,
+.hvrbox.active .hvrbox-layer_top {
+    opacity: 1;
+}
+
+.hvrbox .hvrbox-text {
+    text-align: center;
+    font-size: 30px;
+    font-family: sans-serif;
+    display: inline-block;
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    -moz-transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+.hvrbox .hvrbox-text_mobile {
+    font-size: 15px;
+    border-top: 1px solid rgb(179, 179, 179);
+    /* for old browsers */
+    border-top: 1px solid rgba(179, 179, 179, 0.7);
+    margin-top: 5px;
+    padding-top: 2px;
+    display: none;
+}
+
+.hvrbox.active .hvrbox-text_mobile {
+    display: block;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+.cursor {
+    cursor: pointer;
+}
+
+.store {
+    background: white;
+    width: 100%;
+    height: 270px; //background-size: cover;
+    color: black;
+    font-family: 'Her-Leeoksun';
+    font-size: 30px;
+    text-align: center;
+}
+
+.footer-bottom {
+    background-color: white;
+    font-size: 25px;
+    bottom: 0px;
+    padding: 30px 0px;
+}

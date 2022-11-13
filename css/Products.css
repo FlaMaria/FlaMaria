@@ -1,0 +1,17 @@
+        div {
+            background-color: seashell;
+            width: 100%;
+            margin: 0px;
+            height: 400px;
+        }
+        table {
+            border-collapse: collapse;
+        }
+        tr {
+            text-align: center;
+        }
+        td {
+            width: 30%;
+            height: 360px;
+            background-color: white;
+        }

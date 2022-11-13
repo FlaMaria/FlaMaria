@@ -1,0 +1,273 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+}
+
+* {
+    margin-left: 0px;
+    margin-top: 0px;
+}
+
+.scroll {
+    list-style: none;
+    position: fixed;
+    top: 50%;
+    right: 10px;
+    opacity: 1;
+    padding-right: 30px;
+    z-index: 0;
+}
+
+.scroll li {
+    font-size: 30px;
+}
+
+.scroll li a {
+    text-decoration: none;
+    display: inline;
+    color: darkolivegreen;
+    -ms-transition: 0.5s;
+    transition: 0.5s;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+.firstPage {
+    position: absolute;
+    top: 0px;
+    width: 100%;
+    z-index: -1;
+    background-image: url(../img_files/Store_img.jpg);
+    background-position: 50%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    height: 759px; //-ms-overflow-style: none; 
+}
+
+.secondPage {
+    position: absolute;
+    top: 759px;
+    width: 100%;
+    z-index: -1;
+    background-color: seashell;
+    height: 800px; //-ms-overflow-style: none; 
+}
+
+.hidden_link {
+    visibility: hidden;
+}
+
+#scroll {
+    position: fixed;
+    left: 50%;
+    bottom: 10px;
+    width: 50px;
+}
+
+#Menu {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    z-index: 0;
+    width: 240px;
+    height: 759px;
+}
+
+div div {
+    position: fixed;
+    left: 38px;
+    width: 164px;
+    z-index: 1;
+}
+
+#Store_Logo {
+    top: 50px;
+    font-family: 'Her-LeeokSun';
+    font-size: 30px;
+    text-align: center;
+}
+
+#Store_Logo a {
+    color: black;
+    text-decoration: none;
+}
+
+#product_list {
+    top: 150px;
+    font-size: 18px;
+    border-bottom: 1.5px solid lightgray;
+}
+
+#user_list {
+    top: 290px;
+    font-size: 13px;
+    border-bottom: 1.5px solid lightgray;
+}
+
+#product_list ul,
+#user_list ul {
+    list-style: none;
+}
+
+#product_list ul li,
+#user_list ul li {
+    padding: 3px;
+}
+
+#product_list ul li a,
+#user_list ul li a {
+    color: black;
+    text-decoration: none;
+}
+
+#logo {
+    top: 390px;
+    padding-bottom: 10px;
+    border-bottom: 1.5px solid lightgray;
+    text-align: center;
+    font-family: 'Her-LeeokSun';
+    font-size: 20px;
+}
+
+#logo p a {
+    color: black;
+    text-decoration: none;
+}
+
+#search {
+    top: 500px;
+}
+
+#search input {
+    width: 140px;
+}
+
+#search img {
+    padding-top: 10px;
+}
+
+#banner_bg {
+    width: 50%;
+    margin-top: 100px;
+    margin-left: 25%;
+    padding-top: 80px;
+    padding-bottom: 80px;
+    text-align: center;
+    font-family: serif;
+    font-size: 25px;
+    font-weight: bolder;
+    color: white;
+}
+
+p span {
+    color: darkolivegreen;
+    font-size: 50px;
+    font-weight: border;
+}
+
+#products_tab {
+    position: absolute;
+    top: 30px;
+    left: 20%;
+    z-index: 0;
+    width: 70%;
+    height: 40px;
+    text-align: center;
+    background-color: darkseagreen;
+    list-style: none;
+    padding: 10px;
+    border-radius: 2em;
+}
+
+#products_tab a {
+    color: black;
+    text-decoration: none;
+}
+
+#products_tab li {
+    display: inline;
+    font-size: 25px;
+    margin: 0px; //border: 1px solid black;
+    padding-left: 100px;
+    padding-right: 100px;
+}
+
+#products_tab li:hover {
+    color: white;
+    background-color: darkolivegreen;
+}
+
+.products {
+    position: absolute;
+    top: 120px;
+    left: 20%;
+    z-index: 0;
+    width: 71%;
+    height: 400px;
+}
+
+iframe {
+    border: 1px;
+    width: 100%;
+    height: 100%;
+}
+
+.purchase {
+    position: absolute;
+    top: 520px;
+    left: 20%;
+    z-index: 0; //background-color: skyblue;
+    //border: 1px solid black;
+    width: 71%;
+    height: 180px;
+}
+
+.purchase table {
+    width: 100%;
+    height: 120px;
+    text-align: center;
+}
+
+.purchase table tr td {
+    padding: 10px;
+}
+
+.purchase_list {
+    vertical-align: top;
+}
+
+details p {
+    width: 100%;
+    text-align: left;
+    margin: 10px;
+}
+
+details summary {
+    font-weight: bold;
+}
+
+summary::-webkit-details-marker {
+    display: none
+}
+
+button {
+    height: 100px;
+    width: 100px;
+    vertical-align: middle;
+    padding: 5px;
+    border: 0px;
+    border-radius: 2em;
+    background-color: darkseagreen;
+}
+
+button:hover {
+    background-color: darkolivegreen;
+    color: white;
+    font-weight: bold;
